@@ -12,11 +12,72 @@
 	<artifactId>rpc-protocol</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rpc-protocol</name>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<protobuf.version>3.1.0</protobuf.version>
+		<ieven-util.version>1.0.0</ieven-util.version>
+		<log4j.version>2.5</log4j.version>
+		<slf4j.version>1.7.2</slf4j.version>
+		<commons-codec.version>1.10</commons-codec.version>
 	</properties>
-	<dependencies>
 
+	<repositories>
+		<repository>
+			<id>rrc-repository</id>
+			<name>rrc repository</name>
+			<url>http://repo.shanyishanmei.com/nexus/content/repositories/renrenche-business-releases</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<!-- apache commons依赖 begin -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons-codec.version}</version>
+		</dependency>
+		<!-- apache commons依赖 end -->
+		<!-- protobuf begin -->
+		<dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-java</artifactId>
+			<version>${protobuf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-java-util</artifactId>
+			<version>${protobuf.version}</version>
+		</dependency>
+		<!-- protobuf end -->
+		<!-- 个人工具依赖 begin -->
+		<dependency>
+			<groupId>com.ieven</groupId>
+			<artifactId>ieven-ext-util</artifactId>
+			<version>${ieven-util.version}</version>
+		</dependency>
+		<!-- 个人工具依赖 end -->
+		<!-- 日志依赖 begin -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<!-- 日志依赖 end -->
 	</dependencies>
 </project>
