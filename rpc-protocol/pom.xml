@@ -20,6 +20,7 @@
 		<log4j.version>2.5</log4j.version>
 		<slf4j.version>1.7.2</slf4j.version>
 		<commons-codec.version>1.10</commons-codec.version>
+		<jackson.version>2.7.4</jackson.version>
 	</properties>
 
 	<repositories>
@@ -79,5 +80,22 @@
 			<version>${log4j.version}</version>
 		</dependency>
 		<!-- 日志依赖 end -->
+		<!-- jackson依赖 begin -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<!-- jackson依赖 end -->
 	</dependencies>
 </project>

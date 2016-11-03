@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ieven</groupId>
+		<artifactId>rpc</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.ieven</groupId>
+	<artifactId>rpc-jputil</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>rpc-jputil</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring-context-support.version>4.3.3.RELEASE</spring-context-support.version>
+	</properties>
+	<dependencies>
+		<!-- VelocityEngineUtils依赖(借鉴spring) begin -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring-context-support.version}</version>
+		</dependency>
+		<!-- VelocityEngineUtils依赖(借鉴spring) end -->
+	</dependencies>
+</project>

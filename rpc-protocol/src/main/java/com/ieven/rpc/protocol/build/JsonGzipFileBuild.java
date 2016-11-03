@@ -18,8 +18,8 @@ public class JsonGzipFileBuild {
 	private static int SIZE = ObjectSize.size;
 
 	public static void main(String[] args) throws FileNotFoundException {
-//		write();
-		read();
+		write();
+//		read();
 	}
 
 	public static void write(){

@@ -25,6 +25,7 @@ public abstract class AbstractGZIPFilesystemCompare extends AbstractFilesystemCo
 			getContext().setDiskByte(GZIPUtils.compress(getContext().getDiskByte()));
 		}else if(getContext().getDiskString()!=null){
 			getContext().setDiskByte(GZIPUtils.compress(getContext().getDiskString()));
+			getContext().setDiskString(null);
 		}
 		long end = System.nanoTime();
 		getLogger().info("gzip压缩结束时间为：" + end);

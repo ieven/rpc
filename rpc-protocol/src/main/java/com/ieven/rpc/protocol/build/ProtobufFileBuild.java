@@ -17,8 +17,8 @@ public class ProtobufFileBuild {
 	private static int SIZE = ObjectSize.size;
 
 	public static void main(String[] args) throws IOException {
-		read();
-		// write();
+//		read();
+		 write();
 	}
 
 	public static void read() throws FileNotFoundException, IOException {

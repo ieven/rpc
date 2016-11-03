@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+option java_package = "${proto.package}";
+option java_outer_classname = "${proto.classname}";
+
+import "google/protobuf/struct.proto";
+
+message Car {${proto.message}}
