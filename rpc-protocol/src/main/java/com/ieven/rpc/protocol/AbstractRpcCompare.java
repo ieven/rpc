@@ -32,11 +32,11 @@ public abstract class AbstractRpcCompare implements RpcCompare {
 	@Override
 	public void readFormDisk() {
 		// TODO Auto-generated method stub
-		long begin = System.nanoTime();
+		long begin = System.currentTimeMillis();
 		getLogger().info("读取开始时间为：" + begin);
 		this.context.setReadBeginTime(begin);
 		readIntoContext();
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 		getLogger().info("读取结束时间为：" + end);
 		this.context.setReadEndTime(end);
 	}
@@ -50,11 +50,11 @@ public abstract class AbstractRpcCompare implements RpcCompare {
 	@Override
 	public void storeToDisk() {
 		// TODO Auto-generated method stub
-		long begin = System.nanoTime();
+		long begin = System.currentTimeMillis();
 		getLogger().info("存储开始时间为：" + begin);
 		this.context.setStoreBeginTime(begin);
 		storeFromContext();
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 		getLogger().info("存储结束时间为：" + end);
 		this.context.setStoreEndTime(end);
 	}
@@ -68,11 +68,11 @@ public abstract class AbstractRpcCompare implements RpcCompare {
 	@Override
 	public void serialize() {
 		// TODO Auto-generated method stub
-		long begin = System.nanoTime();
+		long begin = System.currentTimeMillis();
 		getLogger().info("序列化开始时间为：" + begin);
 		this.context.setSerializeBeginTime(begin);
 		serializeIntoContext();
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 		getLogger().info("序列化结束时间为：" + end);
 		this.context.setSerializeEndTime(end);
 	}
@@ -85,11 +85,11 @@ public abstract class AbstractRpcCompare implements RpcCompare {
 	@Override
 	public void deserialize() {
 		// TODO Auto-generated method stub
-		long begin = System.nanoTime();
+		long begin = System.currentTimeMillis();
 		getLogger().info("反序列化开始时间为：" + begin);
 		this.context.setDeserializeBeginTime(begin);
 		deserializeIntoContext();
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 		getLogger().info("反序列化结束时间为：" + end);
 		this.context.setDeserializeEndTime(end);
 	}

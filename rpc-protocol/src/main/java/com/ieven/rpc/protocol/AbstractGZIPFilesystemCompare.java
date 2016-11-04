@@ -18,7 +18,7 @@ public abstract class AbstractGZIPFilesystemCompare extends AbstractFilesystemCo
 	@Override
 	public void gzipCompress() {
 		// TODO Auto-generated method stub
-		long begin = System.nanoTime();
+		long begin = System.currentTimeMillis();
 		getLogger().info("gzip压缩开始时间为：" + begin);
 		((RpcGzipContext)getContext()).setGzipCompressBeginTime(begin);
 		if(getContext().getDiskByte()!=null&&getContext().getDiskByte().length!=0){
@@ -27,7 +27,7 @@ public abstract class AbstractGZIPFilesystemCompare extends AbstractFilesystemCo
 			getContext().setDiskByte(GZIPUtils.compress(getContext().getDiskString()));
 			getContext().setDiskString(null);
 		}
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 		getLogger().info("gzip压缩结束时间为：" + end);
 		((RpcGzipContext)getContext()).setGzipCompressEndTime(end);
 	}
@@ -35,7 +35,7 @@ public abstract class AbstractGZIPFilesystemCompare extends AbstractFilesystemCo
 	@Override
 	public void gzipUncompress() {
 		// TODO Auto-generated method stub
-		long begin = System.nanoTime();
+		long begin = System.currentTimeMillis();
 		getLogger().info("gzip解压缩开始时间为：" + begin);
 		((RpcGzipContext)getContext()).setGzipUncompressBeginTime(begin);
 		if(getContext().getContentByte()!=null&&getContext().getContentByte().length!=0){
@@ -43,7 +43,7 @@ public abstract class AbstractGZIPFilesystemCompare extends AbstractFilesystemCo
 			getContext().setContentByte((GZIPUtils.uncompress(temp)));
 			getContext().setContentString((GZIPUtils.uncompressToString(temp)));
 		}
-		long end = System.nanoTime();
+		long end = System.currentTimeMillis();
 		getLogger().info("gzip解压缩结束时间为：" + end);
 		((RpcGzipContext)getContext()).setGzipUncompressEndTime(end);
 	}
