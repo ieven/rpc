@@ -23,14 +23,6 @@
 		<jackson.version>2.7.4</jackson.version>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>rrc-repository</id>
-			<name>rrc repository</name>
-			<url>http://repo.shanyishanmei.com/nexus/content/repositories/renrenche-business-releases</url>
-		</repository>
-	</repositories>
-
 	<dependencies>
 		<!-- apache commons依赖 begin -->
 		<dependency>
